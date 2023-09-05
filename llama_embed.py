@@ -3,6 +3,7 @@ import torch
 import pickle
 from transformers import LlamaForCausalLM, LlamaTokenizer
 import random
+import numpy as np
 
 tokenizer = LlamaTokenizer.from_pretrained("decapoda-research/llama-7b-hf")
 model = LlamaForCausalLM.from_pretrained("decapoda-research/llama-7b-hf")
@@ -74,9 +75,8 @@ if __name__ == '__main__':
             inputs = tokenizer(rela_sentence, return_tensors='pt').to(device)
             model = model.to(device)
             embed = model.generate(inputs.input_ids, max_length=64, output_hidden_states=True)
-            embed_dic["relation"] = j["relation"]
-            embed_dic["embed"] = embed
-            embed_lis.append(embed_dic)
+            embed = embed.cpu().tolist()[0]
+            embed_lis.append(embed)
 
     relation_file = open('relation_embed.pickle','wb')
     pickle.dump(embed_lis, relation_file)
