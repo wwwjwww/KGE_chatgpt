@@ -2,6 +2,7 @@
 import torch
 from transformers import LlamaForCausalLM, LlamaTokenizer
 import random
+import pickle
 
 tokenizer = LlamaTokenizer.from_pretrained("decapoda-research/llama-7b-hf")
 model = LlamaForCausalLM.from_pretrained("decapoda-research/llama-7b-hf")
