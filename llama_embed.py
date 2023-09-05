@@ -1,8 +1,8 @@
 # Load model directly
 import torch
+import pickle
 from transformers import LlamaForCausalLM, LlamaTokenizer
 import random
-import pickle
 
 tokenizer = LlamaTokenizer.from_pretrained("decapoda-research/llama-7b-hf")
 model = LlamaForCausalLM.from_pretrained("decapoda-research/llama-7b-hf")
@@ -23,9 +23,10 @@ def get_data_batch(inputs, batch_size=None, shuffle=False):
     if shuffle:
         random.seed(100)
         random.shuffle(indices)
+
     while True:
         batch_indices = indices[0:batch_size]  # 产生一个batch的index
-        indices = indices[batch_size:] + indices[:batch_size]  # 循环移位，以便产生下一个batch
+        indices = indices[batch_size:]  # 循环移位，以便产生下一个batch
         batch_data = []
         temp_data = find_list(batch_indices, inputs)
         batch_data.append(temp_data)
@@ -59,9 +60,11 @@ if __name__ == '__main__':
     relation_lis = load_relation_file(file1)
 
     iter = 5
-    batch = get_data_batch(inputs=relation_lis, batch_size=5, shuffle=True)
+    batch_size = len(relation_lis) // iter + 1
+    batch = get_data_batch(inputs=relation_lis, batch_size=batch_size, shuffle=False)
 
     embed_lis = []
+    len_embed = 0
     for i in range(iter):
         embed_dic = {"relation": None, "embed": None}
         batch_relation = get_next_batch(batch)
@@ -73,7 +76,7 @@ if __name__ == '__main__':
             embed = model.generate(inputs.input_ids, max_length=64, output_hidden_states=True)
             embed_dic["relation"] = j["relation"]
             embed_dic["embed"] = embed
-            embed_lis.append(relation_dic)
+            embed_lis.append(embed_dic)
 
     relation_file = open('relation_embed.pickle','wb')
     pickle.dump(embed_lis, relation_file)
