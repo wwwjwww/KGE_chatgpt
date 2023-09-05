@@ -3,7 +3,6 @@ import torch
 from transformers import LlamaForCausalLM, LlamaTokenizer
 import random
 
-
 tokenizer = LlamaTokenizer.from_pretrained("decapoda-research/llama-7b-hf")
 model = LlamaForCausalLM.from_pretrained("decapoda-research/llama-7b-hf")
 model = model.bfloat16()
@@ -67,9 +66,8 @@ if __name__ == '__main__':
         batch_relation = get_next_batch(batch)
         rela_dic = batch_relation[0]
         for j in rela_dic:
-            print(j)
             rela_sentence = j["sentence"]
-            inputs = tokenizer(j, return_tensors='pt').to(device)
+            inputs = tokenizer(rela_sentence, return_tensors='pt').to(device)
             model = model.to(device)
             embed = model.generate(inputs.input_ids, max_length=64, output_hidden_states=True)
             embed_dic["relation"] = j["relation"]
