@@ -1,0 +1,237 @@
+/soccer/football_team/current_roster./soccer/football_roster_position/position	It represents the position played by a player in the current roster of a football team.
+/music/artist/origin	It represents the origin or country of origin of a music artist.
+/ice_hockey/hockey_team/current_roster./sports/sports_team_roster/position	It represents the position played by a player in the current roster of an ice hockey team.
+/food/food/nutrients./food/nutrition_fact/nutrient	It represents the nutrient content of a food item.
+/film/actor/film./film/performance/film	It represents the film in which an actor has performed.
+/award/award_nominee/award_nominations./award/award_nomination/nominated_for	It represents the number of award nominations received by an individual or entity for a particular award.
+/government/political_party/politicians_in_this_party./government/political_party_tenure/politician	It represents the tenure of a politician in a political party.
+/base/schemastaging/person_extra/net_worth./measurement_unit/dated_money_value/currency	It represents the net worth of a person, measured in a dated monetary value and currency.
+/people/deceased_person/place_of_death	It represents the place where a deceased person passed away.
+/people/person/profession	It represents the profession or occupation of a person.
+/location/administrative_division/first_level_division_of	It represents the first level division or administrative division of a location.
+/base/marchmadness/ncaa_basketball_tournament/seeds./base/marchmadness/ncaa_tournament_seed/team	It represents the seed or ranking given to a team in the NCAA basketball tournament.
+/education/university/international_tuition./measurement_unit/dated_money_value/currency	It represents the international tuition fees of a university, measured in a specific currency.
+/location/us_county/county_seat	It represents the seat or administrative center of a county in the United States.
+/location/location/partially_contains	It represents the partial containment relationship between two locations in a knowledge graph.
+/tv/tv_program/program_creator	It represents the creator of a TV program.
+/film/film/music	It represents the music associated with a film.
+/tv/tv_program/languages	It represents the languages in which a TV program is available.
+/common/topic/webpage./common/webpage/category	It represents the category or type of webpage that is associated with a particular topic.
+/user/tsegaran/random/taxonomy_subject/entry./user/tsegaran/random/taxonomy_entry/taxonomy	"It represents the taxonomy entry for the subject ""random"" in the user Tsegaran's taxonomy."
+/education/field_of_study/students_majoring./education/education/major_field_of_study	It represents the major field of study that students are pursuing in the field of education.
+/business/business_operation/assets./measurement_unit/dated_money_value/currency	It represents the currency value of assets in the business operation, measured in dated money value units.
+/film/film_set_designer/film_sets_designed	It represents the film sets that have been designed by a film set designer.
+/dataworld/gardening_hint/split_to	It represents how to split or divide something in gardening, specifically providing hints or guidance on the proper techniques for dividing plant material such as bulbs, tubers, or perennials.
+/people/person/languages	It represents the languages spoken by a person.
+/business/job_title/people_with_this_title./business/employment_tenure/company	It represents the employment tenure of people with a specific job title at a company.
+/location/country/form_of_government	It represents the form of government associated with a specific country's location.
+/base/schemastaging/organization_extra/phone_number./base/schemastaging/phone_sandbox/service_language	It represents the phone number associated with the organization's extra information in the knowledge graph.
+/people/person/place_of_birth	It represents the birthplace of a person.
+/sports/sports_team/colors	It represents the colors associated with a sports team.
+/education/educational_institution/school_type	It represents the type of school or educational institution.
+/award/award_category/winners./award/award_honor/award_winner	It represents the winners of an award in a specific award category.
+/organization/organization/headquarters./location/mailing_address/citytown	It represents the city or town where the mailing address of an organization's headquarters is located.
+/education/educational_degree/people_with_this_degree./education/education/student	It represents people who are students pursuing an educational degree.
+/government/legislative_session/members./government/government_position_held/legislative_sessions	It represents the legislative sessions in which government positions are held.
+/film/film/distributors./film/film_film_distributor_relationship/film_distribution_medium	It represents the medium through which a film is distributed by a film distributor.
+/education/educational_degree/people_with_this_degree./education/education/major_field_of_study	It represents the major field of study pursued by people with a specific educational degree.
+/location/hud_county_place/county	It represents the county associated with a place in the Heads Up Display (HUD).
+/location/administrative_division/country	It represents the country that an administrative division is located in.
+/film/film/film_production_design_by	It represents the person or company responsible for the production design of a film.
+/award/award_winning_work/awards_won./award/award_honor/award	It represents the awards won for an award-winning work in the knowledge graph.
+/organization/organization/headquarters./location/mailing_address/state_province_region	It represents the state, province, or region associated with the mailing address of an organization's headquarters.
+/base/schemastaging/organization_extra/phone_number./base/schemastaging/phone_sandbox/contact_category	It represents the phone number and contact category of an organization in the phone sandbox schema staging.
+/tv/tv_program/country_of_origin	It represents the country of origin of a TV program.
+/olympics/olympic_participating_country/medals_won./olympics/olympic_medal_honor/medal	It represents the Olympics participating country's medal honor, which indicates the medals won by the country in the Olympics.
+/location/country/second_level_divisions	It represents the second-level divisions within a country's geographical location.
+/award/award_ceremony/awards_presented./award/award_honor/honored_for	It represents the honors or accolades for which an award ceremony has been presented.
+/organization/organization_member/member_of./organization/organization_membership/organization	It represents the membership of an individual as a member in an organization within a knowledge graph.
+/education/educational_institution/campuses	It represents the campuses associated with an educational institution.
+/music/artist/contribution./music/recording_contribution/performance_role	It represents the specific role or contribution of an artist in a music recording.
+/award/ranked_item/appears_in_ranked_lists./award/ranking/list	It represents the appearance of a ranked item in a list within the context of an award ranking.
+/people/person/religion	It represents the religion of a person.
+/travel/travel_destination/climate./travel/travel_destination_monthly_climate/month	It represents the climate of a travel destination in a specific month.
+/film/special_film_performance_type/film_performance_type./film/performance/film	It represents the type of performance or role played by a special film in a particular film.
+/award/award_nominee/award_nominations./award/award_nomination/award	It represents the number of award nominations received by an individual or entity for a specific award.
+/location/statistical_region/religions./location/religion_percentage/religion	It represents the percentage of individuals belonging to different religions in a statistical region.
+/sports/sports_league_draft/picks./sports/sports_league_draft_pick/school	It represents the school from which a player is picked in a sports league draft.
+/film/film/distributors./film/film_film_distributor_relationship/region	It represents the region in which a film is distributed by a film distributor.
+/government/politician/government_positions_held./government/government_position_held/legislative_sessions	It represents the legislative sessions in which a politician has held a government position.
+/organization/role/leaders./organization/leadership/organization	It represents the leadership role within an organization.
+/tv/tv_network/programs./tv/tv_network_duration/program	It represents the duration of a program aired on a TV network.
+/soccer/football_team/current_roster./sports/sports_team_roster/position	It represents the position played by a player in the current roster of a sports team.
+/music/instrument/instrumentalists	It represents the instrumentalists who play a particular musical instrument.
+/business/business_operation/operating_income./measurement_unit/dated_money_value/currency	It represents the currency of the operating income, which is a financial value earned or generated by a business operation.
+/people/cause_of_death/people	It represents the cause of death for a person.
+/film/film/film_art_direction_by	It represents the art direction of a film, i.e., the creative and visual aspects of designing and organizing the film's settings, locations, props, and overall visual style.
+/people/person/sibling_s./people/sibling_relationship/sibling	It represents the sibling relationship between two people.
+/film/film/cinematography	It represents the cinematography aspect of a film.
+/film/actor/dubbing_performances./film/dubbing_performance/language	It represents the language in which an actor has performed dubbing in the film industry.
+/base/biblioness/bibs_location/state	It represents the state in which the location of the bibs is classified or categorized.
+/base/petbreeds/city_with_dogs/top_breeds./base/petbreeds/dog_city_relationship/dog_breed	It represents the relationship between a dog breed and the city where it is most commonly found or associated with.
+/people/person/gender	It represents the gender of a person.
+/education/field_of_study/students_majoring./education/education/student	It represents the field of study that a student is majoring in within the context of education.
+/base/popstra/celebrity/dated./base/popstra/dated/participant	It represents a participant who has dated a celebrity in the Popstra dataset.
+/sports/sports_team/roster./american_football/football_roster_position/position	It represents the position played by a player in the roster of an American football team.
+/award/award_winner/awards_won./award/award_honor/award_winner	It represents the awards won by an award winner.
+/olympics/olympic_participating_country/medals_won./olympics/olympic_medal_honor/olympics	It represents the Olympic medal honor received by a participating country in the Olympics.
+/film/director/film	It represents the film directed by a director.
+/tv/tv_producer/programs_produced./tv/tv_producer_term/program	It represents the programs produced by a TV producer during a specific term.
+/film/film_distributor/films_distributed./film/film_film_distributor_relationship/film	It represents the relationship between a film and the distributor(s) involved in distributing that film.
+/olympics/olympic_games/sports	It represents the sports participated in the Olympic Games.
+/music/record_label/artist	It represents the record label associated with an artist in the music industry.
+/education/university/local_tuition./measurement_unit/dated_money_value/currency	It represents the measurement unit for the local tuition fee at a university, with the unit being a dated money value in a specific currency.
+/film/film/story_by	It represents the story creator of a film in a knowledge graph.
+/people/person/spouse_s./people/marriage/spouse	It represents the spouse of a person in a marriage.
+/sports/sports_league/teams./sports/sports_league_participation/team	It represents the participation of a team in a sports league.
+/people/profession/specialization_of	It represents the specialization or area of expertise of a person in their profession.
+/base/americancomedy/celebrity_impressionist/celebrities_impersonated	It represents the celebrities that are impersonated by an American comedy celebrity impressionist.
+/tv/tv_program/genre	It represents the genre of a TV program.
+/award/award_category/nominees./award/award_nomination/nominated_for	It represents nominees who have been nominated for an award category.
+/language/human_language/countries_spoken_in	It represents the countries in which a particular human language is spoken.
+/organization/organization/headquarters./location/mailing_address/country	It represents the country where an organization's headquarters mailing address is located.
+/location/statistical_region/gdp_real./measurement_unit/adjusted_money_value/adjustment_currency	It represents the adjusted real GDP value of a statistical region, measured in the currency of the adjustment.
+/education/university/fraternities_and_sororities	It represents the fraternities and sororities associated with a university in the education domain of a knowledge graph.
+/award/award_nominee/award_nominations./award/award_nomination/award_nominee	It represents the number of award nominations received by an individual or entity for a specific award.
+/military/military_combatant/military_conflicts./military/military_combatant_group/combatants	It represents the combatants involved in military conflicts for a particular military combatant group.
+/award/award_nominated_work/award_nominations./award/award_nomination/nominated_for	It represents the nominations received by a work for a particular award in the context of an award nomination.
+/location/location/time_zones	It represents the time zones associated with a specific location.
+/film/film/dubbing_performances./film/dubbing_performance/actor	It represents the actor's performance in providing voice-over or dubbing for a film.
+/film/film_subject/films	It represents the films that are categorized under a specific film subject.
+/education/educational_degree/people_with_this_degree./education/education/institution	It represents the relation between an educational degree and the people who have acquired this degree at a specific institution.
+/education/educational_institution/colors	It represents the colors associated with an educational institution.
+/award/award_category/category_of	"It represents the category of an award in the context of a knowledge graph, such as ""best player,"" ""top scorer,"" or ""most valuable player."""
+/tv/tv_personality/tv_regular_appearances./tv/tv_regular_personal_appearance/program	It represents the regular appearances of a television personality on a particular TV program.
+/film/film/language	It represents the language in which a film is produced.
+/music/group_member/membership./music/group_membership/group	It represents the membership of a person in a music group or band.
+/business/business_operation/revenue./measurement_unit/dated_money_value/currency	It represents the currency of the revenue generated by a business operation.
+/film/film/film_festivals	It represents the film festivals in which a particular film has been or will be showcased.
+/film/actor/film./film/performance/special_performance_type	It represents the special performance type of an actor in a specific film, as a part of the film's performance.
+/organization/non_profit_organization/registered_with./organization/non_profit_registration/registering_agency	It represents the registration of a non-profit organization with a registering agency.
+/government/politician/government_positions_held./government/government_position_held/jurisdiction_of_office	It represents the jurisdiction or office for which a politician has held a government position.
+/base/aareas/schema/administrative_area/administrative_parent	It represents the administrative area that serves as the parent or higher-level administrative division for a given administrative area in a knowledge graph.
+/award/award_winning_work/awards_won./award/award_honor/award_winner	It represents a relationship in a knowledge graph where an entity is the winner of awards in the context of their award-winning work.
+/organization/organization/place_founded	It represents the place where an organization was founded.
+/soccer/football_player/current_team./sports/sports_team_roster/team	It represents the current roster of a sports team, including all the players currently associated with the team.
+/government/politician/government_positions_held./government/government_position_held/basic_title	It represents the basic title of a government position held by a politician.
+/music/artist/track_contributions./music/track_contribution/role	It represents the role or contribution of an artist in a music track.
+/base/localfood/seasonal_month/produce_available./base/localfood/produce_availability/seasonal_months	It represents the availability of produce in a specific month for a certain local food.
+/celebrities/celebrity/celebrity_friends./celebrities/friendship/friend	It represents the friendship between two celebrities in the knowledge graph.
+/sports/professional_sports_team/draft_picks./sports/sports_league_draft_pick/school	It represents the school from which a draft pick was selected in the sports league draft for a professional sports team.
+/award/hall_of_fame/inductees./award/hall_of_fame_induction/inductee	It represents the individuals who have been inducted into a hall of fame as recipients of a specific award.
+/influence/influence_node/peers./influence/peer_relationship/peers	It represents the peers or individuals who have a direct influence or impact on a specific entity or node within a network of influence.
+/medicine/disease/risk_factors	It represents the risk factors associated with a specific disease in the field of medicine.
+/broadcast/content/artist	It represents the content broadcasted by an artist.
+/film/film/estimated_budget./measurement_unit/dated_money_value/currency	It represents the currency of the estimated budget for a film.
+/military/military_conflict/combatants./military/military_combatant_group/combatants	It represents the combatants involved in a military conflict, specifically the combatant groups participating in the conflict.
+/location/capital_of_administrative_division/capital_of./location/administrative_division_capital_relationship/administrative_division	It represents the relationship between a location and its corresponding capital in an administrative division.
+/tv/tv_program/regular_cast./tv/regular_tv_appearance/actor	It represents the regular cast members who appear in a TV program, specifically their roles as actors.
+/people/deceased_person/place_of_burial	It represents the place where a deceased person is buried.
+/location/location/adjoin_s./location/adjoining_relationship/adjoins	It represents the adjoining relationship between two locations.
+/music/group_member/membership./music/group_membership/role	It represents the role or position that a person holds within a music group or band.
+/award/award_ceremony/awards_presented./award/award_honor/award_winner	It represents the winner of an award in the context of an award ceremony.
+/film/film/prequel	It represents a prequel film in the film domain.
+/film/film/produced_by	It represents the relation between a film and the entity that produced it.
+/tv/tv_program/tv_producer./tv/tv_producer_term/producer_type	It represents the type of producer associated with a TV program.
+/sports/sports_position/players./sports/sports_team_roster/team	It represents the players who are part of the team's roster for a specific sports position.
+/olympics/olympic_games/participating_countries	It represents the countries that are participating in the Olympic Games.
+/music/genre/parent_genre	It represents the parent genre of a specific music genre in a knowledge graph.
+/tv/tv_writer/tv_programs./tv/tv_program_writer_relationship/tv_program	It represents the relationship between a TV writer and the TV programs they have written for.
+/music/genre/artists	It represents the genre of music associated with a group or individual artists.
+/film/film/genre	It represents the genre of a film.
+/people/person/employment_history./business/employment_tenure/company	It represents the employment history and tenure of a person at a particular company.
+/education/university/domestic_tuition./measurement_unit/dated_money_value/currency	It represents the domestic tuition cost in a specific currency for a university education.
+/people/person/nationality	It represents the nationality of a person in a knowledge graph.
+/location/country/capital	It represents the capital city of a country.
+/location/statistical_region/gni_per_capita_in_ppp_dollars./measurement_unit/dated_money_value/currency	It represents the Gross National Income (GNI) per capita in Purchasing Power Parity (PPP) dollars for a specific statistical region.
+/base/aareas/schema/administrative_area/capital	It represents the capital city of an administrative area.
+/business/business_operation/industry	It represents the industry in which a business operation operates.
+/location/hud_foreclosure_area/estimated_number_of_mortgages./measurement_unit/dated_integer/source	It represents the estimated number of mortgages in the HUD foreclosure area, measured in units of dated integers and sourced from a specific source.
+/film/film/other_crew./film/film_crew_gig/crewmember	It represents the crew member involved in a specific gig or project within the film industry.
+/base/popstra/location/vacationers./base/popstra/vacation_choice/vacationer	It represents the choice of vacation made by a vacationer in a particular location.
+/film/film/film_format	It represents the format in which a film is presented or distributed.
+/medicine/disease/notable_people_with_this_condition	It represents the notable people who have been diagnosed with a specific disease in the medical field.
+/film/film/costume_design_by	It represents the costume designer responsible for designing the costumes for a film.
+/government/government_office_category/officeholders./government/government_position_held/jurisdiction_of_office	It represents the jurisdiction of the office held by the individuals in the government office category.
+/location/statistical_region/gdp_nominal./measurement_unit/dated_money_value/currency	It represents the currency used to measure the nominal GDP (Gross Domestic Product) of a statistical region at a specific point in time.
+/sports/sports_team/roster./baseball/baseball_roster_position/position	It represents the position played by a player in the roster of a baseball team.
+/award/award_winning_work/awards_won./award/award_honor/honored_for	It represents the awards won by a person or entity for their award-winning work.
+/olympics/olympic_sport/athletes./olympics/olympic_athlete_affiliation/olympics	It represents the affiliation of an Olympic athlete with a particular Olympic sport.
+/celebrities/celebrity/sexual_relationships./celebrities/romantic_relationship/celebrity	It represents the romantic relationship of a celebrity in the context of sexual relationships.
+/people/marriage_union_type/unions_of_this_type./people/marriage/location_of_ceremony	It represents the location of the marriage ceremony for unions of this type.
+/organization/organization/child./organization/organization_relationship/child	It represents the child organization in the organizational relationship within an organization.
+/organization/organization_founder/organizations_founded	It represents the organizations that have been founded by an organization founder in a knowledge graph.
+/sports/sports_team/sport	It represents the sport in which a sports team participates.
+/people/ethnicity/geographic_distribution	It represents the geographic distribution of ethnicities among people.
+/location/statistical_region/places_exported_to./location/imports_and_exports/exported_to	It represents the places that a statistical region exports to.
+/location/country/official_language	It represents the official language spoken in a country.
+/film/film/production_companies	It represents the production companies involved in the production of a film.
+/user/jg/default_domain/olympic_games/sports	It represents the sports category associated with the Olympic Games.
+/time/event/locations	It represents the locations of events that occur at a specific time.
+/people/person/spouse_s./people/marriage/type_of_union	It represents the type of union in a marriage.
+/government/governmental_body/members./government/government_position_held/legislative_sessions	It represents the legislative sessions during which a member of a governmental body holds a government position.
+/media_common/netflix_genre/titles	It represents the titles associated with a specific Netflix genre in the Media Commons domain.
+/user/alexander/philosophy/philosopher/interests	It represents the interests of the philosopher Alexander in the field of philosophy.
+/film/film/runtime./film/film_cut/film_release_region	It represents the release region of a cut version of a film, where the film cut is a specific version or edit of the film and is associated with a particular region for its release.
+/education/educational_institution/students_graduates./education/education/student	It represents the students who have graduated from a specific educational institution.
+/base/eating/practicer_of_diet/diet	It represents the diet followed by an individual who is a practitioner of eating as the base entity.
+/tv/non_character_role/tv_regular_personal_appearances./tv/tv_regular_personal_appearance/person	It represents a person who makes regular personal appearances on TV shows in a non-character role.
+/sports/sports_position/players./sports/sports_team_roster/position	It represents the position played by a player in the roster of a sports team.
+/sports/professional_sports_team/draft_picks./sports/sports_league_draft_pick/draft	It represents the draft pick selection made by a professional sports team in a sports league draft.
+/medicine/symptom/symptom_of	It represents the relationship between a symptom and the medical condition or disease that the symptom is associated with.
+/film/person_or_entity_appearing_in_film/films./film/personal_film_appearance/type_of_appearance	It represents the type of appearance made by a person or entity in a film.
+/sports/sports_team_location/teams	It represents the location of sports teams.
+/american_football/football_team/current_roster./sports/sports_team_roster/position	It represents the position played by a player in the current roster of an American football team.
+/people/person/places_lived./people/place_lived/location	It represents the location where a person has lived.
+/location/statistical_region/rent50_2./measurement_unit/dated_money_value/currency	It represents the rental value in currency for a statistical region at a specific point in time.
+/film/film/personal_appearances./film/personal_film_appearance/person	It represents the person's appearance in a film, specifically in a personal capacity.
+/music/instrument/family	It represents the family or category of musical instruments that a particular instrument belongs to.
+/sports/sports_team/roster./basketball/basketball_roster_position/position	It represents the position played by a player in the roster of a basketball team.
+/base/schemastaging/organization_extra/phone_number./base/schemastaging/phone_sandbox/service_location	It represents the phone number associated with the service location of an organization.
+/film/film/release_date_s./film/film_regional_release_date/film_release_region	It represents the regional release date of a film, which is a specific date or time when a film is released in a particular region.
+/award/award_category/disciplines_or_subjects	It represents the disciplines or subjects associated with an award category.
+/base/popstra/celebrity/friendship./base/popstra/friendship/participant	It represents the participants involved in a friendship between two celebrities in the Popstra knowledge graph.
+/music/performance_role/regular_performances./music/group_membership/group	It represents the group membership of an artist or performer in the context of their regular performances in a music setting.
+/film/film/edited_by	It represents the entity that edited a film in a knowledge graph.
+/base/x2010fifaworldcupsouthafrica/world_cup_squad/current_world_cup_squad./base/x2010fifaworldcupsouthafrica/current_world_cup_squad/current_club	It represents the current club that is represented by a player in the current World Cup squad of the 2010 FIFA World Cup South Africa.
+/base/popstra/celebrity/canoodled./base/popstra/canoodled/participant	It represents a participant who has engaged in a romantic or intimate relationship with a celebrity in the Popstra database.
+/film/film/release_date_s./film/film_regional_release_date/film_release_distribution_medium	It represents the release distribution medium for a film's regional release date.
+/film/film/other_crew./film/film_crew_gig/film_crew_role	It represents the role played by a crew member in a film production.
+/base/popstra/celebrity/breakup./base/popstra/breakup/participant	It represents the participation of a celebrity in a breakup event.
+/film/film/country	It represents the country in which a film was produced.
+/music/performance_role/regular_performances./music/group_membership/role	It represents the role played by a musician in terms of regular performances within a music group.
+/sports/sports_team/roster./american_football/football_historical_roster_position/position_s	It represents the historical position played by a player in the roster of an American football team.
+/film/film/release_date_s./film/film_regional_release_date/film_regional_debut_venue	It represents the regional debut venue for a film, which is the place where a film is first released in a specific region.
+/time/event/instance_of_recurring_event	It represents an instance of a recurring event in time.
+/olympics/olympic_participating_country/athletes./olympics/olympic_athlete_affiliation/olympics	It represents the affiliation or association of an athlete with a participating country in the Olympics.
+/organization/endowed_organization/endowment./measurement_unit/dated_money_value/currency	It represents the currency value and denomination of an endowment endowed to an organization, measured in dated money value with a specific measurement unit.
+/travel/travel_destination/how_to_get_here./travel/transportation/mode_of_transportation	It represents the mode of transportation used to get to a travel destination.
+/baseball/baseball_team/team_stats./baseball/baseball_team_stats/season	It represents the team statistics for a specific season of a baseball team.
+/award/award_category/winners./award/award_honor/ceremony	It represents the ceremony associated with an award honor in the award category winners.
+/government/legislative_session/members./government/government_position_held/district_represented	It represents the district represented by a member in a legislative session of the government.
+/influence/influence_node/influenced_by	It represents the influence that an entity has on another entity in a knowledge graph.
+/base/culturalevent/event/entity_involved	It represents the entity involved in a cultural event.
+/people/ethnicity/people	It represents the ethnicity of a person.
+/sports/sport/pro_athletes./sports/pro_sports_played/athlete	It represents the professional athletes who participate in various sports.
+/location/statistical_region/gdp_nominal_per_capita./measurement_unit/dated_money_value/currency	It represents the GDP (Gross Domestic Product) nominal per capita of a statistical region, which is measured in dated money value currency.
+/location/hud_county_place/place	It represents the location or place associated with a county in the Heads Up Display (HUD) system.
+/base/aareas/schema/administrative_area/administrative_area_type	It represents the administrative area type of a given administrative area in a knowledge graph.
+/base/locations/continents/countries_within	It represents the countries that are located within the continents in a knowledge graph.
+/sports/sports_position/players./american_football/football_historical_roster_position/position_s	It represents the position played by players in the historical roster of an American football team.
+/people/person/spouse_s./people/marriage/location_of_ceremony	It represents the location where the marriage ceremony of a person's spouse took place.
+/education/educational_institution/students_graduates./education/education/major_field_of_study	It represents the major field of study of students or graduates of an educational institution.
+/film/film/written_by	It represents the entity relation between a film and its writer(s).
+/olympics/olympic_sport/athletes./olympics/olympic_athlete_affiliation/country	It represents the country affiliation of an athlete in the Olympic sport.
+/music/performance_role/guest_performances./music/recording_contribution/performance_role	It represents the role played by a performer in the context of guest performances in music.
+/film/film/featured_film_locations	It represents the featured film locations in a film.
+/education/educational_institution_campus/educational_institution	It represents the campus or location of an educational institution.
+/sports/pro_athlete/teams./sports/sports_team_roster/team	It represents the teams that a professional athlete has been a part of.
+/people/ethnicity/languages_spoken	It represents the languages spoken by a person's ethnicity.
+/film/film/executive_produced_by	It represents the executive producer(s) of a film.
+/tv/tv_producer/programs_produced./tv/tv_producer_term/producer_type	It represents the type of producer who has produced programs in the TV industry.
+/location/location/contains	It represents the relationship between two locations in a knowledge graph where one location contains or is part of another location.
+/base/biblioness/bibs_location/country	It represents the country where the bibs are located in the library.
+/user/ktrueman/default_domain/international_organization/member_states	It represents the member states of an international organization.
+/music/performance_role/track_performances./music/track_contribution/role	It represents the role or contribution of a musical artist in the track performances within the music domain.
+/olympics/olympic_games/medals_awarded./olympics/olympic_medal_honor/medal	It represents the medals awarded in Olympic Games, specifically the type of medal received by an individual or a team as a recognition of their performance in a specific event.
+/base/saturdaynightlive/snl_cast_member/seasons./base/saturdaynightlive/snl_season_tenure/cast_members	It represents the seasons in which a cast member appeared in the television show Saturday Night Live.
