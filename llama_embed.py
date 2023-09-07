@@ -4,11 +4,18 @@ import pickle
 from transformers import LlamaForCausalLM, LlamaTokenizer
 import random
 import numpy as np
+import tensorflow as tf
 
 tokenizer = LlamaTokenizer.from_pretrained("decapoda-research/llama-7b-hf")
+tokenizer.add_special_tokens({'pad_token': '[PAD]'})
+
 model = LlamaForCausalLM.from_pretrained("decapoda-research/llama-7b-hf")
+model.resize_token_embeddings(len(tokenizer))
+model.config.pad_token_id = tokenizer.pad_token_id
+model.model.embed_tokens.padding_idx = tokenizer.pad_token_id
 model = model.bfloat16()
-device = "cuda:0" if torch.cuda.is_available() else "cpu"
+#device = "cuda:0" if torch.cuda.is_available() else "cpu"
+device = "cpu"
 
 def get_data_batch(inputs, batch_size=None, shuffle=False):
     '''
@@ -54,30 +61,37 @@ def load_relation_file(filename):
             relation_lis.append(relation_dic)
     return relation_lis
 
-if __name__ == '__main__':
-    device = "cuda:0" if torch.cuda.is_available() else "cpu"
+def load_chatgpt_relation_file(filename):
     relation_lis = []
-    file1 = './data/FB15k-237/relation2text.txt'
-    relation_lis = load_relation_file(file1)
+    with open(filename) as f:
+        lines = f.readlines()
+        for line in lines:
+            relation_lis.append(line.rstrip())
+    return relation_lis
 
-    iter = 5
+if __name__ == '__main__':
+    relation_lis = []
+    file1 = './data/FB15k-237/chatgpt_relations_descriptions.txt'
+    relation_lis = load_chatgpt_relation_file(file1)
+    
+    iter = 40
     batch_size = len(relation_lis) // iter + 1
     batch = get_data_batch(inputs=relation_lis, batch_size=batch_size, shuffle=False)
 
     embed_lis = []
     len_embed = 0
+
     for i in range(iter):
-        embed_dic = {"relation": None, "embed": None}
         batch_relation = get_next_batch(batch)
         rela_dic = batch_relation[0]
-        for j in rela_dic:
-            rela_sentence = j["sentence"]
-            inputs = tokenizer(rela_sentence, return_tensors='pt').to(device)
-            model = model.to(device)
-            embed = model.generate(inputs.input_ids, max_length=64, output_hidden_states=True)
-            embed = embed.cpu().tolist()[0]
-            embed_lis.append(embed)
+        inputs = tokenizer(rela_dic, return_tensors='pt', padding="max_length", max_length=64, truncation=True).to(device)
+        model = model.to(device)
+        print(model.model.embed_tokens)
+        embed = model.forward(**inputs, output_hidden_states=True)
+        hidden_states = embed.hidden_states[-1]
+        for j in range(len(hidden_states)):
+            states = hidden_states[j]
+            record_states = states.detach().to(torch.float).cpu().numpy()
+            embed_lis.append(record_states)
 
-    relation_file = open('relation_embed.pickle','wb')
-    pickle.dump(embed_lis, relation_file)
-    relation_file.close()
+    np.save('relation_embedding.npy', embed_lis)
