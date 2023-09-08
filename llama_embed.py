@@ -123,8 +123,8 @@ if __name__ == '__main__':
             record_states = states.detach().to(torch.float).cpu().numpy()
             embed_lis.append(record_states)
 
-    np.save(os.path.join(args.data_dir, 'relation_embedding_llama.npy'), embed_lis)
+    np.save(os.path.join(args.embed_save_path, 'relation_embedding_llama.npy'), embed_lis)
     embed_processed = processed_embeddings(embed_lis, args.rel_length, args.rel_dim)
-    np.save(os.path.join(args.data_dir, 'relation_embedding_processed.npy'), embed_processed)
+    np.save(os.path.join(args.embed_save_path, 'relation_embedding_processed.npy'), embed_processed)
 
 
