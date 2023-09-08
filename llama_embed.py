@@ -7,6 +7,8 @@ import os
 import argparse
 import numpy as np
 import tensorflow as tf
+from sklearn import preprocessing
+from sklearn.decomposition import PCA
 
 tokenizer = LlamaTokenizer.from_pretrained("decapoda-research/llama-7b-hf")
 tokenizer.add_special_tokens({'pad_token': '[PAD]'})
@@ -16,8 +18,8 @@ model.resize_token_embeddings(len(tokenizer))
 model.config.pad_token_id = tokenizer.pad_token_id
 model.model.embed_tokens.padding_idx = tokenizer.pad_token_id
 model = model.bfloat16()
-#device = "cuda:0" if torch.cuda.is_available() else "cpu"
-device = "cpu"
+device = "cuda:0" if torch.cuda.is_available() else "cpu"
+#device = "cpu"
 
 def get_data_batch(inputs, batch_size=None, shuffle=False):
     '''
