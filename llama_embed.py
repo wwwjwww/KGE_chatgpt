@@ -89,7 +89,7 @@ if __name__ == '__main__':
                     help="Max length of llama input_ids")
     parser.add_argument("--rel_length", type=int, default=237, nargs="?",
                     help="length of output relation from llama")
-    parser.add_argument("--rel_dim", type=int, default=237, nargs="?",
+    parser.add_argument("--rel_dim", type=int, default=200, nargs="?",
                     help="dimensions of relations of your model")
     parser.add_argument("--iter", type=int, default=40, nargs="?",
                     help="How many iterations to get data batch")
@@ -113,7 +113,6 @@ if __name__ == '__main__':
         batch_relation = get_next_batch(batch)
         rela_dic = batch_relation[0]
         inputs = tokenizer(rela_dic, return_tensors='pt', padding="max_length", max_length=args.max_length, truncation=True).to(device)
-        print(rela_dic)
         model = model.to(device)
         print(model.model.embed_tokens)
         embed = model.forward(**inputs, output_hidden_states=True)
