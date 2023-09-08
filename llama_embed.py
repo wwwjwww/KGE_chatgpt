@@ -101,6 +101,9 @@ if __name__ == '__main__':
 
     relation_lis = []
     relation_lis = load_chatgpt_relation_file(os.path.join(args.data_dir, 'chatgpt_relations_descriptions.txt'))
+
+    if not os.path.exists(args.embed_save_path):
+        os.mkdir(args.embed_save_path)
     
     iter = args.iter
     batch_size = len(relation_lis) // iter + 1
