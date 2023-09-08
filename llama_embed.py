@@ -3,8 +3,12 @@ import torch
 import pickle
 from transformers import LlamaForCausalLM, LlamaTokenizer
 import random
+import os
+import argparse
 import numpy as np
 import tensorflow as tf
+from sklearn import preprocessing
+from sklearn.decomposition import PCA
 
 tokenizer = LlamaTokenizer.from_pretrained("decapoda-research/llama-7b-hf")
 tokenizer.add_special_tokens({'pad_token': '[PAD]'})
@@ -66,15 +70,42 @@ def load_chatgpt_relation_file(filename):
     with open(filename) as f:
         lines = f.readlines()
         for line in lines:
-            relation_lis.append(line.rstrip())
+            relation_lis.append(line.rstrip().split('\t')[1])
     return relation_lis
 
+def processed_embeddings(content, rel_length, rel_dim):
+    embed = content.reshape(rel_length, -1)
+    pca = PCA(n_components=rel_dim)
+    embed = pca.fit_transform(embed)
+
+    min_max_scaler = preprocessing.MinMaxScaler()
+    embed_minmax = min_max_scaler.fit_transform(embed)
+    embed_normalized = preprocessing.normalize(embed_minmax, norm='l2')
+    return embed_normalized
+
 if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--max_length", type=int, default=64, nargs="?",
+                    help="Max length of llama input_ids")
+    parser.add_argument("--rel_length", type=int, default=237, nargs="?",
+                    help="length of output relation from llama")
+    parser.add_argument("--rel_dim", type=int, default=200, nargs="?",
+                    help="dimensions of relations of your model")
+    parser.add_argument("--iter", type=int, default=40, nargs="?",
+                    help="How many iterations to get data batch")
+    parser.add_argument("--data_dir", type=str, default="./data/FB15k-237", nargs="?",
+                    help="data path")
+    parser.add_argument("--embed_save_path", type=str, default="./embed", nargs="?",
+                    help="file path to save your embeddings")
+    args = parser.parse_args()
+
     relation_lis = []
-    file1 = './data/FB15k-237/chatgpt_relations_descriptions.txt'
-    relation_lis = load_chatgpt_relation_file(file1)
+    relation_lis = load_chatgpt_relation_file(os.path.join(args.data_dir, 'chatgpt_relations_descriptions.txt'))
+
+    if not os.path.exists(args.embed_save_path):
+        os.mkdir(args.embed_save_path)
     
-    iter = 40
+    iter = args.iter
     batch_size = len(relation_lis) // iter + 1
     batch = get_data_batch(inputs=relation_lis, batch_size=batch_size, shuffle=False)
 
@@ -84,7 +115,7 @@ if __name__ == '__main__':
     for i in range(iter):
         batch_relation = get_next_batch(batch)
         rela_dic = batch_relation[0]
-        inputs = tokenizer(rela_dic, return_tensors='pt', padding="max_length", max_length=64, truncation=True).to(device)
+        inputs = tokenizer(rela_dic, return_tensors='pt', padding="max_length", max_length=args.max_length, truncation=True).to(device)
         model = model.to(device)
         print(model.model.embed_tokens)
         embed = model.forward(**inputs, output_hidden_states=True)
@@ -94,4 +125,8 @@ if __name__ == '__main__':
             record_states = states.detach().to(torch.float).cpu().numpy()
             embed_lis.append(record_states)
 
-    np.save('relation_embedding.npy', embed_lis)
+    np.save(os.path.join(args.embed_save_path, 'relation_embedding_llama.npy'), embed_lis)
+    embed_processed = processed_embeddings(embed_lis, args.rel_length, args.rel_dim)
+    np.save(os.path.join(args.embed_save_path, 'relation_embedding_processed.npy'), embed_processed)
+
+
