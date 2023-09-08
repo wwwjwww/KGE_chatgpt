@@ -18,8 +18,8 @@ model.resize_token_embeddings(len(tokenizer))
 model.config.pad_token_id = tokenizer.pad_token_id
 model.model.embed_tokens.padding_idx = tokenizer.pad_token_id
 model = model.bfloat16()
-device = "cuda:0" if torch.cuda.is_available() else "cpu"
-#device = "cpu"
+#device = "cuda:0" if torch.cuda.is_available() else "cpu"
+device = "cpu"
 
 def get_data_batch(inputs, batch_size=None, shuffle=False):
     '''
@@ -70,7 +70,7 @@ def load_chatgpt_relation_file(filename):
     with open(filename) as f:
         lines = f.readlines()
         for line in lines:
-            relation_lis.append(line.rstrip())
+            relation_lis.append(line.rstrip().split('\t')[1])
     return relation_lis
 
 def processed_embeddings(content, rel_length, rel_dim):
@@ -113,6 +113,7 @@ if __name__ == '__main__':
         batch_relation = get_next_batch(batch)
         rela_dic = batch_relation[0]
         inputs = tokenizer(rela_dic, return_tensors='pt', padding="max_length", max_length=args.max_length, truncation=True).to(device)
+        print(rela_dic)
         model = model.to(device)
         print(model.model.embed_tokens)
         embed = model.forward(**inputs, output_hidden_states=True)
