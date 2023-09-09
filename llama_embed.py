@@ -126,7 +126,7 @@ if __name__ == '__main__':
             embed_lis.append(record_states)
 
     np.save(os.path.join(args.embed_save_path, 'relation_embedding_llama.npy'), embed_lis)
-    embed_processed = processed_embeddings(embed_lis, args.rel_length, args.rel_dim)
+    embed_processed = processed_embeddings(np.array(embed_lis), args.rel_length, args.rel_dim)
     np.save(os.path.join(args.embed_save_path, 'relation_embedding_processed.npy'), embed_processed)
 
 
