@@ -18,8 +18,8 @@ model.resize_token_embeddings(len(tokenizer))
 model.config.pad_token_id = tokenizer.pad_token_id
 model.model.embed_tokens.padding_idx = tokenizer.pad_token_id
 model = model.bfloat16()
-#device = "cuda:0" if torch.cuda.is_available() else "cpu"
-device = "cpu"
+#device = "cuda:4" if torch.cuda.is_available() else "cpu"
+device = "cuda"
 
 def get_data_batch(inputs, batch_size=None, shuffle=False):
     '''
@@ -117,15 +117,15 @@ if __name__ == '__main__':
         rela_dic = batch_relation[0]
         inputs = tokenizer(rela_dic, return_tensors='pt', padding="max_length", max_length=args.max_length, truncation=True).to(device)
         model = model.to(device)
-        print(model.model.embed_tokens)
         embed = model.forward(**inputs, output_hidden_states=True)
         hidden_states = embed.hidden_states[-1]
         for j in range(len(hidden_states)):
-            states = hidden_states[j]
+            states = torch.mean(hidden_states[j], dim=0)
+            #states = hidden_states[j][-1]
             record_states = states.detach().to(torch.float).cpu().numpy()
             embed_lis.append(record_states)
 
-    np.save(os.path.join(args.embed_save_path, 'relation_embedding_llama_original.npy'), embed_lis)
+    np.save(os.path.join(args.embed_save_path, 'relation_embedding_llama_avg.npy'), embed_lis)
     #embed_processed = processed_embeddings(np.array(embed_lis), args.rel_length, args.rel_dim)
     #np.save(os.path.join(args.embed_save_path, 'relation_embedding_processed.npy'), embed_processed)
 
